@@ -2,15 +2,30 @@ package main
 
 import "fmt"
 
-func printNumbers(n ...int) {
-	for i, v := range n {
-		fmt.Println(i, v)
-	}
+type Bot interface {
+	greeting() string
+}
 
+type EnglishBot struct{}
+type SpanishBot struct{}
+
+func (EnglishBot) greeting() string {
+	return "Hi there!"
+}
+
+func (SpanishBot) greeting() string {
+	return "Hola!!"
+}
+
+func printMessage(b Bot) {
+	fmt.Println(b.greeting())
 }
 
 func main() {
-	// lx := []int{1, 2, 3, 4, 4, 5, 5}
-	printNumbers(1, 2, 3, 4)
+	eb := EnglishBot{}
+	sb := SpanishBot{}
+
+	printMessage(eb)
+	printMessage(sb)
 
 }
