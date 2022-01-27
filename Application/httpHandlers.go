@@ -13,7 +13,7 @@ func barHandler(w http.ResponseWriter, r *http.Request) {
 }
 
 func (f *fooHandler) ServeHTTP(w http.ResponseWriter, r *http.Request) {
-	w.Write([]byte(f.Message))
+	w.Write([]byte("Hello from Foo Handler"))
 
 }
 
