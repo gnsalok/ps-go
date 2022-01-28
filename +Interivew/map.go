@@ -42,12 +42,26 @@ func main() {
 		fmt.Println(k, v)
 	}
 
-	// Check if value in the Map
-
+	// Method-1 :Check if value in the Map
 	if val, ok := emp[5]; ok {
 		fmt.Println("Key in Present, Value ", val)
 	} else {
 		fmt.Println("Key in not Present")
 	}
 
+	// Method-2 : Check if value present in the Map
+
+	val, exist := emp[3]
+	if exist {
+		fmt.Println("exist ", val)
+	}
 }
+
+/*
+nameMap := make(map[string]int)
+nameMap["river"] = 33
+v ,exist := nameMap["river"]
+if exist {
+    fmt.Println("exist ",v)
+}
+*/
