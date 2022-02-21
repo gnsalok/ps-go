@@ -5,6 +5,7 @@ import (
 	"reflect"
 )
 
+// nil interface
 func printNumbers(n interface{}) {
 	fmt.Println(n, reflect.TypeOf(n))
 
