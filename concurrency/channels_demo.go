@@ -13,8 +13,9 @@ func main() {
 	wg.Add(2)
 
 	ch := make(chan int)
+	input := 100
 
-	go send(ch)
+	go send(ch, input)
 
 	go receive(ch)
 
@@ -22,9 +23,9 @@ func main() {
 
 }
 
-func send(ch chan<- int) {
+func send(ch chan<- int, input int) {
 	defer wg.Done()
-	ch <- 100
+	ch <- input
 }
 
 func receive(ch <-chan int) {
