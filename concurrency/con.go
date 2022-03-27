@@ -33,7 +33,7 @@ func main() {
 		fmt.Println("First Func")
 	}()
 
-	func() {
+	go func() {
 		defer waitGrp.Done()
 		fmt.Println("Second Func")
 	}()
