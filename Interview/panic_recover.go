@@ -1,3 +1,6 @@
+// https://gobyexample.com/recover
+// recovere must be called in defer function
+
 package main
 
 import "fmt"
