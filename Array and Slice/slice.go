@@ -8,6 +8,7 @@ func main() {
 		- slices are resizable array ; or Slices are Pointer/Reference to Array [V.Imp.]
 		- built on the top of array.
 		- slice are passed to function by reference, casue its built on the top of array.
+		- The capacity of a slice is the number of elements in the underlying array, counting from the first element in the slice.
 	*/
 
 	// Creating slices

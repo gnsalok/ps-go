@@ -12,7 +12,7 @@ func main() {
 
 	// courseList := []string{"Course1", "Course2", "Course3"}
 
-	for _, v := range courseList {
+	for i, v := range courseList {
 		fmt.Println(i, v)
 	}
 
